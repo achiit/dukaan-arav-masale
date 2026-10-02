@@ -1,0 +1,3400 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8d1717">
+<meta name="description" content="ARAV MASALE — Premium Indian spices from Jaunpur, Uttar Pradesh.">
+<title>ARAV MASALE | असली स्वाद</title>
+
+<style>
+:root{
+  --red:#8d1717;
+  --red2:#b92d20;
+  --gold:#d5a33b;
+  --gold2:#f0ca68;
+  --cream:#fff8ed;
+  --cream2:#f8ead6;
+  --green:#234d35;
+  --ink:#211916;
+  --muted:#756b65;
+  --white:#fff;
+  --border:#ead9c6;
+  --shadow:0 18px 55px rgba(50,20,10,.13);
+  --radius:24px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.5;
+  overflow-x:hidden;
+}
+
+body.no-scroll{
+  overflow:hidden;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+button{
+  border:0;
+  cursor:pointer;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+  background:var(--green);
+  color:#fff;
+  text-align:center;
+  padding:7px 12px;
+  font-size:12px;
+  letter-spacing:.3px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,248,237,.93);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(141,23,23,.08);
+}
+
+.nav{
+  height:74px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-family:Georgia,serif;
+  font-size:25px;
+  font-weight:900;
+  color:var(--red);
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+
+.logo span{
+  display:block;
+  text-align:center;
+  font:800 8px/1.2 Inter,sans-serif;
+  color:var(--green);
+  letter-spacing:3px;
+}
+
+.navlinks{
+  display:flex;
+  gap:25px;
+  margin-left:auto;
+  font-size:14px;
+  font-weight:700;
+}
+
+.navlinks a{
+  transition:.25s;
+}
+
+.navlinks a:hover{
+  color:var(--red);
+}
+
+.actions{
+  display:flex;
+  gap:9px;
+  align-items:center;
+}
+
+.iconbtn{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid var(--border);
+  display:grid;
+  place-items:center;
+  font-size:18px;
+  position:relative;
+  transition:.25s;
+}
+
+.iconbtn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(80,30,10,.1);
+}
+
+.badge{
+  position:absolute;
+  right:-2px;
+  top:-2px;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--red);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:10px;
+  font-weight:800;
+}
+
+.menu{
+  display:none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  min-height:670px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 82% 25%,rgba(213,163,59,.28),transparent 27%),
+    radial-gradient(circle at 10% 90%,rgba(255,210,100,.12),transparent 30%),
+    linear-gradient(120deg,#5f0f13 0%,#8d1717 50%,#b33a20 100%);
+}
+
+.hero:before,
+.hero:after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:50%;
+}
+
+.hero:before{
+  width:550px;
+  height:550px;
+  right:-200px;
+  top:-180px;
+}
+
+.hero:after{
+  width:350px;
+  height:350px;
+  left:-170px;
+  bottom:-180px;
+}
+
+.spice{
+  position:absolute;
+  font-size:48px;
+  opacity:.25;
+  animation:float 5s ease-in-out infinite;
+}
+
+.s1{right:8%;top:18%}
+.s2{left:7%;bottom:17%;animation-delay:1s}
+.s3{right:18%;bottom:8%;font-size:30px;animation-delay:2s}
+
+.hero-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:55px;
+}
+
+.eyebrow{
+  color:#f3d98e;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(45px,7vw,82px);
+  line-height:.98;
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:#f3cf69;
+}
+
+.hero p{
+  max-width:580px;
+  color:#ffe9d1;
+  font-size:17px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  min-height:48px;
+  padding:13px 20px;
+  border-radius:999px;
+  font-weight:800;
+  transition:.25s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.btn-primary{
+  background:var(--gold);
+  color:#27170e;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(0,0,0,.2);
+}
+
+.btn-light{
+  background:rgba(255,255,255,.1);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.3);
+}
+
+.btn-light:hover{
+  background:#fff;
+  color:var(--red);
+}
+
+.hero-product{
+  position:relative;
+  display:flex;
+  justify-content:center;
+}
+
+.spice-orbit{
+  position:absolute;
+  width:390px;
+  height:390px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:50%;
+  animation:spin 22s linear infinite;
+}
+
+.spice-orbit:before,
+.spice-orbit:after{
+  content:"";
+  position:absolute;
+  width:16px;
+  height:16px;
+  background:var(--gold);
+  border-radius:50%;
+}
+
+.spice-orbit:before{
+  top:20px;
+  left:70px;
+}
+
+.spice-orbit:after{
+  right:25px;
+  bottom:70px;
+}
+
+.pack{
+  position:relative;
+  z-index:2;
+  width:245px;
+  min-height:330px;
+  border-radius:25px 25px 35px 35px;
+  background:
+    linear-gradient(145deg,#d6a63d,#9e1d1b 44%,#651014);
+  box-shadow:
+    0 35px 60px rgba(0,0,0,.32),
+    inset 0 0 0 2px rgba(255,255,255,.18);
+  transform:rotate(4deg);
+  animation:packFloat 4s ease-in-out infinite;
+  padding:35px 20px;
+  text-align:center;
+}
+
+.pack:before{
+  content:"";
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  height:8px;
+  border-radius:10px;
+  background:rgba(255,255,255,.3);
+}
+
+.pack-brand{
+  font:900 29px Georgia,serif;
+  color:#fff;
+  margin-top:35px;
+}
+
+.pack-line{
+  width:70px;
+  height:2px;
+  background:var(--gold2);
+  margin:12px auto;
+}
+
+.pack-name{
+  font-size:27px;
+  font-weight:900;
+  color:#fff1c8;
+}
+
+.pack-sub{
+  margin-top:8px;
+  color:#ffe8b5;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+  padding:90px 0;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:35px;
+}
+
+.section-kicker{
+  color:var(--red);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.section-title{
+  font-family:Georgia,serif;
+  font-size:clamp(31px,5vw,48px);
+  line-height:1.05;
+}
+
+.section-sub{
+  color:var(--muted);
+  max-width:550px;
+  margin-top:10px;
+}
+
+/* =========================
+   CATEGORY CARDS
+========================= */
+
+.category-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+.category-card{
+  position:relative;
+  overflow:hidden;
+  min-height:290px;
+  border-radius:30px;
+  padding:35px;
+  color:#fff;
+  display:flex;
+  align-items:end;
+  box-shadow:var(--shadow);
+  isolation:isolate;
+}
+
+.category-card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 75% 30%,rgba(255,216,120,.25),transparent 28%),
+    linear-gradient(135deg,#711318,#a92b1d);
+}
+
+.category-card.business:before{
+  background:
+    radial-gradient(circle at 75% 30%,rgba(213,163,59,.25),transparent 28%),
+    linear-gradient(135deg,#173e2b,#2c6041);
+}
+
+.category-card:after{
+  content:"🌶️";
+  position:absolute;
+  right:25px;
+  top:20px;
+  font-size:100px;
+  opacity:.14;
+  transform:rotate(-12deg);
+}
+
+.category-card.business:after{
+  content:"📦";
+}
+
+.category-content{
+  position:relative;
+  z-index:2;
+}
+
+.category-content h3{
+  font:800 34px Georgia,serif;
+  margin-bottom:8px;
+}
+
+.category-content p{
+  max-width:450px;
+  color:#ffe9d4;
+  margin-bottom:18px;
+}
+
+.business .category-content p{
+  color:#d9eadf;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products{
+  background:#fffdf8;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.product-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(50,20,10,.06);
+  transition:.35s;
+  position:relative;
+}
+
+.product-card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+}
+
+.product-img{
+  height:250px;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(213,163,59,.2),transparent 50%),
+    #f5e8d4;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.product-img:after{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background:rgba(141,23,23,.08);
+  filter:blur(4px);
+}
+
+.mini-pack{
+  position:relative;
+  z-index:2;
+  width:125px;
+  height:175px;
+  border-radius:14px 14px 20px 20px;
+  background:linear-gradient(150deg,#d7aa44,#971c1b 50%,#631014);
+  box-shadow:0 20px 30px rgba(70,20,10,.2);
+  transform:rotate(3deg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:white;
+}
+
+.mini-pack strong{
+  font:900 17px Georgia,serif;
+}
+
+.mini-pack small{
+  color:#f7d779;
+  font-weight:800;
+  margin-top:8px;
+}
+
+.wish{
+  position:absolute;
+  z-index:4;
+  right:13px;
+  top:13px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid var(--border);
+  font-size:18px;
+}
+
+.wish.active{
+  background:#ffe2e2;
+  color:var(--red);
+}
+
+.best{
+  position:absolute;
+  left:13px;
+  top:13px;
+  z-index:4;
+  background:var(--green);
+  color:#fff;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:10px;
+  font-weight:900;
+}
+
+.product-body{
+  padding:20px;
+}
+
+.product-body h3{
+  font:800 24px Georgia,serif;
+}
+
+.product-en{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.product-description{
+  color:var(--muted);
+  font-size:13px;
+  margin:8px 0 15px;
+}
+
+.variant-row{
+  display:flex;
+  gap:8px;
+  margin-bottom:14px;
+}
+
+.variant{
+  flex:1;
+  padding:9px 7px;
+  background:#fff8ef;
+  border:1px solid var(--border);
+  border-radius:12px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.variant.active{
+  border-color:var(--red);
+  background:#fff0e8;
+  color:var(--red);
+}
+
+.price-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:14px;
+}
+
+.price{
+  font-size:22px;
+  font-weight:900;
+  color:var(--red);
+}
+
+.add{
+  width:100%;
+  background:var(--red);
+  color:#fff;
+  border-radius:14px;
+  padding:12px;
+  font-weight:900;
+  transition:.25s;
+}
+
+.add:hover{
+  background:var(--red2);
+  transform:translateY(-2px);
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story{
+  background:
+    radial-gradient(circle at 10% 20%,rgba(213,163,59,.1),transparent 25%),
+    var(--cream);
+}
+
+.story-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:65px;
+  align-items:center;
+}
+
+.story-visual{
+  min-height:500px;
+  border-radius:35px;
+  background:
+    linear-gradient(160deg,rgba(141,23,23,.8),rgba(35,77,53,.92)),
+    radial-gradient(circle at 50% 35%,#d5a33b,transparent 35%);
+  position:relative;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  display:grid;
+  place-items:center;
+}
+
+.story-visual:before{
+  content:"ARAV";
+  font:900 130px Georgia,serif;
+  color:rgba(255,255,255,.07);
+  transform:rotate(-15deg);
+}
+
+.story-seal{
+  position:absolute;
+  width:190px;
+  height:190px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:#fff;
+  font-family:Georgia,serif;
+  font-size:25px;
+}
+
+.timeline{
+  margin-top:30px;
+  border-left:2px solid var(--gold);
+  padding-left:25px;
+}
+
+.timeline-item{
+  position:relative;
+  padding-bottom:25px;
+}
+
+.timeline-item:before{
+  content:"";
+  position:absolute;
+  left:-33px;
+  top:6px;
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 0 5px var(--cream);
+}
+
+.timeline-item h4{
+  font:800 22px Georgia,serif;
+  color:var(--red);
+  margin-bottom:5px;
+}
+
+.timeline-item p{
+  color:var(--muted);
+}
+
+/* =========================
+   WHY ARAV
+========================= */
+
+.why{
+  background:var(--green);
+  color:#fff;
+}
+
+.why .section-kicker{
+  color:#e7c75e;
+}
+
+.why .section-sub{
+  color:#cfe0d5;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.feature{
+  padding:25px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;
+  background:rgba(255,255,255,.06);
+  transition:.3s;
+}
+
+.feature:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,.1);
+}
+
+.feature-icon{
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.feature h3{
+  margin-bottom:7px;
+}
+
+.feature p{
+  color:#cfe0d5;
+  font-size:13px;
+}
+
+/* =========================
+   AI
+========================= */
+
+.ai-section{
+  background:#fffdf8;
+}
+
+.ai-box{
+  border-radius:32px;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(213,163,59,.25),transparent 25%),
+    linear-gradient(135deg,#5d1014,#8d1717);
+  color:#fff;
+  padding:45px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  box-shadow:var(--shadow);
+}
+
+.ai-title{
+  font:800 42px Georgia,serif;
+  margin-bottom:12px;
+}
+
+.ai-description{
+  color:#ffe5d1;
+  margin-bottom:20px;
+}
+
+.ai-chat{
+  background:#fff;
+  color:var(--ink);
+  border-radius:24px;
+  padding:18px;
+  min-height:300px;
+  display:flex;
+  flex-direction:column;
+}
+
+.chat-messages{
+  flex:1;
+  overflow:auto;
+  max-height:210px;
+  padding-right:4px;
+}
+
+.message{
+  max-width:85%;
+  padding:10px 13px;
+  border-radius:15px;
+  margin-bottom:9px;
+  font-size:13px;
+}
+
+.message.bot{
+  background:#f4ecdf;
+}
+
+.message.user{
+  margin-left:auto;
+  background:var(--red);
+  color:#fff;
+}
+
+.chat-form{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
+
+.chat-form input{
+  flex:1;
+  min-width:0;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:11px;
+  outline:none;
+}
+
+.chat-form button{
+  width:45px;
+  border-radius:12px;
+  background:var(--red);
+  color:#fff;
+}
+
+/* =========================
+   BULK CTA
+========================= */
+
+.bulk{
+  background:var(--cream2);
+}
+
+.bulk-box{
+  border-radius:30px;
+  padding:50px;
+  background:var(--green);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  box-shadow:var(--shadow);
+}
+
+.bulk-box h2{
+  font:800 42px Georgia,serif;
+}
+
+.bulk-box p{
+  color:#d5e4da;
+  margin-top:8px;
+  max-width:650px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:25px;
+  padding:30px;
+}
+
+.contact-card h3{
+  font:800 28px Georgia,serif;
+  color:var(--red);
+  margin-bottom:18px;
+}
+
+.contact-item{
+  display:flex;
+  gap:13px;
+  margin:17px 0;
+  align-items:flex-start;
+}
+
+.contact-icon{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#fff1df;
+  display:grid;
+  place-items:center;
+}
+
+.contact-form{
+  display:grid;
+  gap:12px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:13px;
+  background:#fffaf2;
+  outline:none;
+}
+
+.contact-form textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#160e0b;
+  color:#fff;
+  padding:55px 0 90px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-logo{
+  font:900 32px Georgia,serif;
+  color:#f1cf69;
+}
+
+footer p{
+  color:#bdb0aa;
+  font-size:13px;
+  margin-top:12px;
+}
+
+.footer-links{
+  display:grid;
+  gap:10px;
+  color:#d9cbc4;
+  font-size:13px;
+}
+
+.footer-links a:hover{
+  color:#f1cf69;
+}
+
+.copyright{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.1);
+  font-size:12px;
+  color:#948681;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:85px;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:#25d366;
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:26px;
+  z-index:90;
+  box-shadow:0 12px 30px rgba(37,211,102,.35);
+  animation:pulse 2.2s infinite;
+}
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom-nav{
+  display:none;
+}
+
+/* =========================
+   MODALS
+========================= */
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  z-index:200;
+  display:none;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.overlay.show{
+  display:flex;
+}
+
+.modal{
+  width:min(600px,100%);
+  max-height:92vh;
+  overflow:auto;
+  background:#fffdf8;
+  border-radius:28px 28px 0 0;
+  padding:25px;
+  animation:slideUp .35s ease;
+}
+
+.modal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.modal-head h3{
+  font:800 28px Georgia,serif;
+}
+
+.close{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#f5e9dc;
+}
+
+.cart-item{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.cart-mini{
+  width:58px;
+  height:70px;
+  border-radius:10px;
+  background:linear-gradient(145deg,#d7aa44,#8d1717);
+  flex-shrink:0;
+}
+
+.cart-info{
+  flex:1;
+}
+
+.cart-info strong{
+  display:block;
+}
+
+.cart-info small{
+  color:var(--muted);
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin-top:7px;
+}
+
+.qty button{
+  width:28px;
+  height:28px;
+  border-radius:8px;
+  background:#f2e6d8;
+}
+
+.remove{
+  color:var(--red);
+  background:transparent;
+  font-size:12px;
+}
+
+.cart-total{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 0;
+  font-size:20px;
+  font-weight:900;
+}
+
+.checkout{
+  width:100%;
+  background:var(--red);
+  color:#fff;
+  padding:14px;
+  border-radius:14px;
+  font-weight:900;
+}
+
+/* Product detail modal */
+
+.detail-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:22px;
+}
+
+.detail-image{
+  min-height:330px;
+  border-radius:20px;
+  background:#f3e5d0;
+  display:grid;
+  place-items:center;
+}
+
+.detail-info h2{
+  font:800 34px Georgia,serif;
+  color:var(--red);
+}
+
+.detail-price{
+  color:var(--red);
+  font-size:27px;
+  font-weight:900;
+  margin:12px 0;
+}
+
+.detail-description{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.detail-actions{
+  display:grid;
+  gap:10px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+  padding:20px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  margin-bottom:25px;
+  display:none;
+}
+
+.search-box.show{
+  display:block;
+}
+
+.search-box input{
+  width:100%;
+  padding:14px;
+  border:1px solid var(--border);
+  border-radius:13px;
+  outline:none;
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .75s ease,transform .75s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float{
+  0%,100%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-18px) rotate(8deg)}
+}
+
+@keyframes packFloat{
+  0%,100%{transform:translateY(0) rotate(4deg)}
+  50%{transform:translateY(-12px) rotate(1deg)}
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+}
+
+@keyframes slideUp{
+  from{transform:translateY(100%)}
+  to{transform:translateY(0)}
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .menu{
+    display:grid;
+  }
+
+  .hero{
+    min-height:720px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:35px;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-product{
+    transform:scale(.78);
+    margin-top:-20px;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .story-grid{
+    grid-template-columns:1fr;
+  }
+
+  .story-visual{
+    min-height:380px;
+  }
+
+  .ai-box{
+    grid-template-columns:1fr;
+  }
+
+  .bulk-box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .topbar{
+    font-size:10px;
+  }
+
+  .nav{
+    height:65px;
+    gap:8px;
+  }
+
+  .logo{
+    font-size:21px;
+  }
+
+  .logo span{
+    font-size:7px;
+  }
+
+  .actions{
+    margin-left:auto;
+  }
+
+  .actions .search-btn{
+    display:none;
+  }
+
+  .iconbtn{
+    width:38px;
+    height:38px;
+  }
+
+  .hero{
+    min-height:720px;
+    padding:55px 0;
+  }
+
+  .hero h1{
+    font-size:47px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .hero-buttons .btn{
+    width:100%;
+  }
+
+  .hero-product{
+    transform:scale(.67);
+    height:260px;
+  }
+
+  .spice-orbit{
+    width:330px;
+    height:330px;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .category-grid{
+    grid-template-columns:1fr;
+  }
+
+  .category-card{
+    min-height:260px;
+    padding:27px;
+  }
+
+  .category-content h3{
+    font-size:29px;
+  }
+
+  .product-grid{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .product-img{
+    height:180px;
+  }
+
+  .mini-pack{
+    width:88px;
+    height:125px;
+  }
+
+  .mini-pack strong{
+    font-size:13px;
+  }
+
+  .product-body{
+    padding:13px;
+  }
+
+  .product-body h3{
+    font-size:18px;
+  }
+
+  .product-description{
+    font-size:11px;
+  }
+
+  .variant-row{
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .variant{
+    padding:7px;
+  }
+
+  .price{
+    font-size:17px;
+  }
+
+  .add{
+    font-size:12px;
+    padding:10px 5px;
+  }
+
+  .features{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .feature{
+    padding:18px 14px;
+  }
+
+  .feature h3{
+    font-size:14px;
+  }
+
+  .feature p{
+    font-size:11px;
+  }
+
+  .ai-box{
+    padding:25px;
+  }
+
+  .ai-title{
+    font-size:31px;
+  }
+
+  .bulk-box{
+    padding:30px;
+  }
+
+  .bulk-box h2{
+    font-size:31px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .bottom-nav{
+    display:flex;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:66px;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(14px);
+    border-top:1px solid var(--border);
+    z-index:95;
+    justify-content:space-around;
+    align-items:center;
+  }
+
+  .bottom-nav a,
+  .bottom-nav button{
+    background:none;
+    color:#6f625c;
+    font-size:10px;
+    font-weight:800;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3px;
+  }
+
+  .bottom-nav span{
+    font-size:20px;
+  }
+
+  .whatsapp{
+    bottom:78px;
+    right:14px;
+    width:52px;
+    height:52px;
+  }
+
+  .detail-grid{
+    grid-template-columns:1fr;
+  }
+
+  .detail-image{
+    min-height:250px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,
+  *:before,
+  *:after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  🌶️ Premium Masale • Jaunpur, Uttar Pradesh • WhatsApp Orders Available
+</div>
+
+<header>
+  <div class="container nav">
+
+    <a href="#home" class="logo">
+      ARAV MASALE
+      <span>ASLI SWAAD</span>
+    </a>
+
+    <nav class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#story">Our Story</a>
+      <a href="#bulk">Bulk / Business</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="actions">
+
+      <button class="iconbtn search-btn" onclick="toggleSearch()" aria-label="Search">
+        🔎
+      </button>
+
+      <button class="iconbtn" onclick="openCart()" aria-label="Cart">
+        🛒
+        <span class="badge" id="cartCount">0</span>
+      </button>
+
+      <button class="iconbtn menu" onclick="toggleMobileMenu()" aria-label="Menu">
+        ☰
+      </button>
+
+    </div>
+
+  </div>
+
+  <div id="mobileMenu" style="display:none;background:#fff;padding:15px 6%;border-top:1px solid #ead9c6">
+    <div style="display:grid;gap:13px;font-weight:800">
+      <a href="#home" onclick="closeMobileMenu()">Home</a>
+      <a href="#products" onclick="closeMobileMenu()">Products</a>
+      <a href="#story" onclick="closeMobileMenu()">Our Story</a>
+      <a href="#bulk" onclick="closeMobileMenu()">Bulk / Business</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="spice s1">🌶️</div>
+  <div class="spice s2">🫚</div>
+  <div class="spice s3">🌿</div>
+
+  <div class="container hero-grid">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        Premium Indian Spices
+      </div>
+
+      <h1>
+        हर पकवान में
+        <span>Arav</span>
+        का असली स्वाद।
+      </h1>
+
+      <p>
+        Jaunpur, Uttar Pradesh se aapki kitchen tak —
+        रोज़मर्रा के खाने के लिए premium masala collection.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#products" class="btn btn-primary">
+          🛒 Explore Products
+        </a>
+
+        <a
+          href="https://wa.me/918795278527?text=Hello%20ARAV%20MASALE%2C%20mujhe%20products%20ke%20baare%20mein%20jaanna%20hai."
+          class="btn btn-light"
+          target="_blank"
+        >
+          💬 WhatsApp Order
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-product reveal">
+
+      <div class="spice-orbit"></div>
+
+      <div class="pack">
+
+        <div class="pack-brand">
+          ARAV
+        </div>
+
+        <div class="pack-line"></div>
+
+        <div class="pack-name">
+          HALDI
+        </div>
+
+        <div class="pack-sub">
+          PREMIUM MASALA
+        </div>
+
+        <div style="font-size:60px;margin-top:25px">
+          🌾
+        </div>
+
+        <div style="margin-top:25px;font-weight:900;color:#fff1b8">
+          असली स्वाद
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <div class="section-kicker">Shop by category</div>
+
+        <h2 class="section-title">
+          आपकी जरूरत, आपका मसाला
+        </h2>
+
+        <p class="section-sub">
+          घर की रसोई से लेकर business requirements तक,
+          ARAV MASALE के साथ अपना सही pack चुनें।
+        </p>
+      </div>
+
+    </div>
+
+    <div class="category-grid">
+
+      <div class="category-card reveal">
+
+        <div class="category-content">
+
+          <div class="section-kicker" style="color:#f2cf68">
+            Primary Collection
+          </div>
+
+          <h3>Home & Kitchen</h3>
+
+          <p>
+            घर के रोज़मर्रा के खाना पकाने के लिए
+            500g और 1kg packs.
+          </p>
+
+          <a href="#products" class="btn btn-primary">
+            Shop Home Products →
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="category-card business reveal">
+
+        <div class="category-content">
+
+          <div class="section-kicker" style="color:#e7c75e">
+            Business Collection
+          </div>
+
+          <h3>Bulk / Business</h3>
+
+          <p>
+            Retailers, wholesalers और business buyers
+            के लिए 100g packs.
+          </p>
+
+          <a href="#bulk" class="btn btn-primary">
+            Explore Bulk →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="section-kicker">
+          Home & Kitchen
+        </div>
+
+        <h2 class="section-title">
+          हमारे मसाले
+        </h2>
+
+        <p class="section-sub">
+          500g और 1kg packs में अपनी पसंद का मसाला चुनें।
+        </p>
+
+      </div>
+
+      <button class="btn" style="background:#f3e6d5" onclick="showBulkProducts()">
+        Bulk ₹35 / 100g
+      </button>
+
+    </div>
+
+    <div id="searchBox" class="search-box">
+
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Masala search करें..."
+        oninput="searchProducts()"
+      >
+
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+  </div>
+
+</section>
+
+<!-- STORY -->
+
+<section class="story" id="story">
+
+  <div class="container story-grid">
+
+    <div class="story-visual reveal">
+
+      <div class="story-seal">
+        ARAV<br>
+        MASALE<br>
+        <small style="font-size:11px;letter-spacing:2px">
+          JAUNPUR
+        </small>
+      </div>
+
+    </div>
+
+    <div class="reveal">
+
+      <div class="section-kicker">
+        Our Story
+      </div>
+
+      <h2 class="section-title">
+        एक स्वाद की शुरुआत…
+      </h2>
+
+      <p class="section-sub">
+        ARAV MASALE की कहानी एक simple idea से शुरू होती है —
+        अच्छे खाने के लिए मसाले सिर्फ ingredient नहीं,
+        बल्कि स्वाद की पहचान होते हैं।
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <h4>Jaunpur से शुरुआत</h4>
+
+          <p>
+            Uttar Pradesh के Jaunpur से मसालों की इस journey
+            को आगे बढ़ाने का सपना।
+          </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <h4>स्वाद पर ध्यान</h4>
+
+          <p>
+            रोज़मर्रा की kitchen needs को ध्यान में रखकर
+            एक focused masala collection.
+          </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <h4>घर की रसोई तक</h4>
+
+          <p>
+            हमारा लक्ष्य है कि ARAV MASALE का स्वाद
+            ज्यादा से ज्यादा kitchens तक पहुँचे।
+          </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <h4>ARAV MASALE</h4>
+
+          <p>
+            एक growing Indian masala brand —
+            स्वाद, simplicity और बेहतर customer experience के साथ।
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WHY ARAV -->
+
+<section class="why">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="section-kicker">
+          Why ARAV
+        </div>
+
+        <h2 class="section-title">
+          मसाला छोटा, असर बड़ा।
+        </h2>
+
+        <p class="section-sub">
+          एक simple और convenient shopping experience
+          आपके kitchen के लिए।
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="features">
+
+      <div class="feature reveal">
+        <div class="feature-icon">🌶️</div>
+        <h3>Focused Collection</h3>
+        <p>
+          रोज़मर्रा में इस्तेमाल होने वाले core masalas.
+        </p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">📦</div>
+        <h3>Multiple Packs</h3>
+        <p>
+          Home और business requirements के लिए अलग pack options.
+        </p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">💬</div>
+        <h3>WhatsApp Order</h3>
+        <p>
+          आसान ordering के लिए direct WhatsApp option.
+        </p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">📍</div>
+        <h3>Jaunpur Based</h3>
+        <p>
+          ARAV MASALE — Jaunpur, Uttar Pradesh.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- AI -->
+
+<section class="ai-section">
+
+  <div class="container">
+
+    <div class="ai-box reveal">
+
+      <div>
+
+        <div class="section-kicker" style="color:#f0ca68">
+          Gemini Powered
+        </div>
+
+        <div class="ai-title">
+          Meet Arav AI 🤖
+        </div>
+
+        <p class="ai-description">
+          Cooking ideas, masala suggestions और product discovery
+          के लिए आपका smart masala assistant.
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+
+          <button class="btn btn-light" onclick="askAI('Paneer ke liye kaunsa masala use karun?')">
+            Paneer?
+          </button>
+
+          <button class="btn btn-light" onclick="askAI('4 logon ke liye kitna masala chahiye?')">
+            4 People
+          </button>
+
+          <button class="btn btn-light" onclick="askAI('Mujhe chicken ke liye kya chahiye?')">
+            Chicken
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="ai-chat">
+
+        <div class="chat-messages" id="chatMessages">
+
+          <div class="message bot">
+            Namaste! 👋 Main Arav AI hoon. Aap kya banana chahte hain?
+          </div>
+
+        </div>
+
+        <form class="chat-form" onsubmit="sendAI(event)">
+
+          <input
+            id="aiInput"
+            placeholder="Jaise: paneer ke liye?"
+            autocomplete="off"
+          >
+
+          <button type="submit">
+            ➤
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BULK -->
+
+<section class="bulk" id="bulk">
+
+  <div class="container">
+
+    <div class="bulk-box reveal">
+
+      <div>
+
+        <div class="section-kicker" style="color:#e7c75e">
+          Bulk / Business
+        </div>
+
+        <h2>
+          Business ke liye bulk masale
+        </h2>
+
+        <p>
+          सभी 6 core products के लिए 100g pack —
+          ₹35 प्रति pack.
+          Retailer, wholesaler या business enquiry के लिए
+          WhatsApp पर contact करें।
+        </p>
+
+      </div>
+
+      <a
+        class="btn btn-primary"
+        target="_blank"
+        href="https://wa.me/918795278527?text=Hello%20ARAV%20MASALE%2C%20mujhe%20Bulk%2FBusiness%20order%20ke%20baare%20mein%20jaanna%20hai."
+      >
+        💬 Bulk Enquiry
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+
+        <div class="section-kicker">
+          Contact
+        </div>
+
+        <h2 class="section-title">
+          बात करते हैं।
+        </h2>
+
+        <p class="section-sub">
+          Product, bulk order या business enquiry के लिए contact करें।
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card reveal">
+
+        <h3>ARAV MASALE</h3>
+
+        <div class="contact-item">
+
+          <div class="contact-icon">📍</div>
+
+          <div>
+            <strong>Location</strong>
+            <p>Jaunpur, Uttar Pradesh, India</p>
+          </div>
+
+        </div>
+
+        <div class="contact-item">
+
+          <div class="contact-icon">📞</div>
+
+          <div>
+            <strong>Phone</strong>
+            <p>
+              <a href="tel:+918795278527">
+                +91 87952 78527
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="contact-item">
+
+          <div class="contact-icon">💬</div>
+
+          <div>
+            <strong>WhatsApp</strong>
+            <p>
+              <a
+                target="_blank"
+                href="https://wa.me/918795278527"
+              >
+                Chat on WhatsApp
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="contact-item">
+
+          <div class="contact-icon">✉️</div>
+
+          <div>
+            <strong>Email</strong>
+            <p>
+              <a href="mailto:aravmasale@gmail.com">
+                aravmasale@gmail.com
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="contact-card reveal">
+
+        <h3>Message Us</h3>
+
+        <form
+          class="contact-form"
+          onsubmit="sendContact(event)"
+        >
+
+          <input
+            id="contactName"
+            required
+            placeholder="Your name"
+          >
+
+          <input
+            id="contactPhone"
+            required
+            type="tel"
+            placeholder="Phone number"
+          >
+
+          <textarea
+            id="contactMessage"
+            required
+            placeholder="Aap kya poochna chahte hain?"
+          ></textarea>
+
+          <button class="btn btn-primary">
+            Send on WhatsApp →
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-logo">
+          ARAV MASALE
+        </div>
+
+        <p>
+          हर पकवान में ARAV का असली स्वाद।
+        </p>
+
+        <p>
+          Jaunpur, Uttar Pradesh
+        </p>
+
+      </div>
+
+      <div>
+
+        <strong>Quick Links</strong>
+
+        <div class="footer-links" style="margin-top:15px">
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#story">Our Story</a>
+          <a href="#bulk">Bulk / Business</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+      </div>
+
+      <div>
+
+        <strong>Contact</strong>
+
+        <div class="footer-links" style="margin-top:15px">
+
+          <a href="tel:+918795278527">
+            +91 87952 78527
+          </a>
+
+          <a href="mailto:aravmasale@gmail.com">
+            aravmasale@gmail.com
+          </a>
+
+          <a
+            target="_blank"
+            href="https://wa.me/918795278527"
+          >
+            WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 ARAV MASALE. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/918795278527"
+  target="_blank"
+  aria-label="WhatsApp"
+>
+  💬
+</a>
+
+<!-- MOBILE BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+  <a href="#home">
+    <span>⌂</span>
+    Home
+  </a>
+
+  <a href="#products">
+    <span>🌶️</span>
+    Products
+  </a>
+
+  <button onclick="openCart()">
+    <span>🛒</span>
+    Cart
+  </button>
+
+  <a href="#bulk">
+    <span>📦</span>
+    Bulk
+  </a>
+
+  <a href="#contact">
+    <span>☰</span>
+    More
+  </a>
+
+</div>
+
+<!-- CART MODAL -->
+
+<div
+  class="overlay"
+  id="cartOverlay"
+  onclick="closeCartOutside(event)"
+>
+
+  <div class="modal">
+
+    <div class="modal-head">
+
+      <h3>Your Cart</h3>
+
+      <button class="close" onclick="closeCart()">
+        ✕
+      </button>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">₹0</span>
+    </div>
+
+    <button
+      class="checkout"
+      onclick="checkoutWhatsApp()"
+    >
+      Order on WhatsApp →
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT DETAIL MODAL -->
+
+<div
+  class="overlay"
+  id="detailOverlay"
+  onclick="closeDetailOutside(event)"
+>
+
+  <div class="modal">
+
+    <div class="modal-head">
+
+      <h3>Product Details</h3>
+
+      <button class="close" onclick="closeDetail()">
+        ✕
+      </button>
+
+    </div>
+
+    <div id="detailContent"></div>
+
+  </div>
+
+</div>
+
+<script>
+
+/* ==========================================
+   ARAV MASALE PRODUCT DATA
+========================================== */
+
+const products = [
+
+  {
+    id:"haldi",
+    name:"Haldi",
+    hindi:"हल्दी",
+    icon:"🌾",
+    description:"रोज़मर्रा की kitchen के लिए हल्दी।",
+    home:[
+      {size:"500g",price:399},
+      {size:"1kg",price:799}
+    ],
+    bulk:{size:"100g",price:35}
+  },
+
+  {
+    id:"dhaniya",
+    name:"Dhaniya",
+    hindi:"धनिया",
+    icon:"🌿",
+    description:"हर रोज़ के स्वाद के लिए धनिया।",
+    home:[
+      {size:"500g",price:399},
+      {size:"1kg",price:799}
+    ],
+    bulk:{size:"100g",price:35}
+  },
+
+  {
+    id:"mirch",
+    name:"Mirch",
+    hindi:"मिर्च",
+    icon:"🌶️",
+    description:"आपके dishes के लिए लाल मिर्च।",
+    home:[
+      {size:"500g",price:399},
+      {size:"1kg",price:799}
+    ],
+    bulk:{size:"100g",price:35}
+  },
+
+  {
+    id:"meat",
+    name:"Meat Masala",
+    hindi:"मीट मसाला",
+    icon:"🍖",
+    description:"Meat dishes के लिए मसाला blend.",
+    home:[
+      {size:"500g",price:399},
+      {size:"1kg",price:799}
+    ],
+    bulk:{size:"100g",price:35}
+  },
+
+  {
+    id:"garam",
+    name:"Garam Masala",
+    hindi:"गरम मसाला",
+    icon:"✨",
+    description:"Rich aroma और flavour के लिए।",
+    home:[
+      {size:"500g",price:399},
+      {size:"1kg",price:799}
+    ],
+    bulk:{size:"100g",price:35}
+  },
+
+  {
+    id:"sabzi",
+    name:"Sabzi Masala",
+    hindi:"सब्जी मसाला",
+    icon:"🥘",
+    description:"रोज़ की सब्जियों के लिए convenient masala.",
+    home:[
+      {size:"500g",price:399},
+      {size:"1kg",price:799}
+    ],
+    bulk:{size:"100g",price:35}
+  }
+
+];
+
+let cart = JSON.parse(localStorage.getItem("aravCart") || "[]");
+let currentMode = "home";
+
+/* ==========================================
+   RENDER PRODUCTS
+========================================== */
+
+function renderProducts(list = products){
+
+  const grid = document.getElementById("productGrid");
+
+  if(!list.length){
+
+    grid.innerHTML = `
+      <div style="grid-column:1/-1;text-align:center;padding:50px">
+        <div style="font-size:45px">🔎</div>
+        <h3>No product found</h3>
+        <p style="color:#756b65">
+          Search term change karke try करें।
+        </p>
+      </div>
+    `;
+
+    return;
+  }
+
+  grid.innerHTML = list.map((p,index)=>{
+
+    const variants = currentMode === "home"
+      ? p.home
+      : [p.bulk];
+
+    const first = variants[0];
+
+    return `
+
+      <article class="product-card reveal">
+
+        ${index < 2 && currentMode === "home"
+          ? `<div class="best">★ FEATURED</div>`
+          : ""
+        }
+
+        <button
+          class="wish"
+          onclick="toggleWishlist(this,'${p.id}')"
+          aria-label="Wishlist"
+        >
+          ♡
+        </button>
+
+        <div
+          class="product-img"
+          onclick="openDetail('${p.id}')"
+          style="cursor:pointer"
+        >
+
+          <div class="mini-pack">
+
+            <strong>ARAV</strong>
+
+            <div style="font-size:9px;letter-spacing:1px">
+              MASALE
+            </div>
+
+            <div style="font-size:35px;margin:8px">
+              ${p.icon}
+            </div>
+
+            <small>
+              ${p.name.toUpperCase()}
+            </small>
+
+          </div>
+
+        </div>
+
+        <div class="product-body">
+
+          <h3>${p.hindi}</h3>
+
+          <div class="product-en">
+            ${p.name}
+          </div>
+
+          <div class="product-description">
+            ${p.description}
+          </div>
+
+          <div class="variant-row">
+
+            ${variants.map((v,i)=>`
+
+              <button
+                class="variant ${i===0 ? "active":""}"
+                data-product="${p.id}"
+                data-size="${v.size}"
+                data-price="${v.price}"
+                onclick="selectVariant(this)"
+              >
+                ${v.size}
+                <br>
+                ₹${v.price}
+              </button>
+
+            `).join("")}
+
+          </div>
+
+          <div class="price-row">
+
+            <div class="price">
+              ₹<span id="price-${p.id}">
+                ${first.price}
+              </span>
+            </div>
+
+            <button
+              style="background:none;color:#8d1717;font-weight:800;font-size:12px"
+              onclick="openDetail('${p.id}')"
+            >
+              Details →
+            </button>
+
+          </div>
+
+          <button
+            class="add"
+            onclick="addSelectedProduct('${p.id}')"
+          >
+            🛒 Add to Cart
+          </button>
+
+        </div>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+  observeReveal();
+
+}
+
+/* ==========================================
+   VARIANT
+========================================== */
+
+function selectVariant(button){
+
+  const productId = button.dataset.product;
+
+  document
+    .querySelectorAll(`[data-product="${productId}"]`)
+    .forEach(btn=>btn.classList.remove("active"));
+
+  button.classList.add("active");
+
+  const price = button.dataset.price;
+
+  const priceElement =
+    document.getElementById(`price-${productId}`);
+
+  if(priceElement){
+    priceElement.textContent = price;
+  }
+}
+
+/* ==========================================
+   ADD TO CART
+========================================== */
+
+function addSelectedProduct(id){
+
+  const product = products.find(p=>p.id===id);
+
+  if(!product) return;
+
+  const selected =
+    document.querySelector(
+      `[data-product="${id}"].active`
+    );
+
+  if(!selected) return;
+
+  const size = selected.dataset.size;
+  const price = Number(selected.dataset.price);
+
+  const existing = cart.find(
+    item => item.id===id && item.size===size
+  );
+
+  if(existing){
+    existing.qty++;
+  }else{
+    cart.push({
+      id,
+      name:product.name,
+      hindi:product.hindi,
+      size,
+      price,
+      qty:1
+    });
+  }
+
+  saveCart();
+
+  showToast(`${product.hindi} cart में add हो गया ✓`);
+}
+
+/* ==========================================
+   CART
+========================================== */
+
+function saveCart(){
+
+  localStorage.setItem(
+    "aravCart",
+    JSON.stringify(cart)
+  );
+
+  updateCartCount();
+  renderCart();
+}
+
+function updateCartCount(){
+
+  const count = cart.reduce(
+    (sum,item)=>sum+item.qty,
+    0
+  );
+
+  document.getElementById("cartCount").textContent = count;
+}
+
+function openCart(){
+
+  renderCart();
+
+  document
+    .getElementById("cartOverlay")
+    .classList.add("show");
+
+  document.body.classList.add("no-scroll");
+}
+
+function closeCart(){
+
+  document
+    .getElementById("cartOverlay")
+    .classList.remove("show");
+
+  document.body.classList.remove("no-scroll");
+}
+
+function closeCartOutside(e){
+
+  if(e.target.id==="cartOverlay"){
+    closeCart();
+  }
+
+}
+
+function renderCart(){
+
+  const box = document.getElementById("cartItems");
+
+  if(!cart.length){
+
+    box.innerHTML = `
+      <div style="text-align:center;padding:45px 10px">
+        <div style="font-size:50px">🛒</div>
+        <h3>Cart अभी खाली है</h3>
+        <p style="color:#756b65;margin-top:6px">
+          अपने पसंदीदा मसाले add करें।
+        </p>
+      </div>
+    `;
+
+    document.getElementById("cartTotal").textContent="₹0";
+
+    return;
+  }
+
+  box.innerHTML = cart.map((item,index)=>`
+
+    <div class="cart-item">
+
+      <div class="cart-mini"></div>
+
+      <div class="cart-info">
+
+        <strong>
+          ${item.hindi}
+        </strong>
+
+        <small>
+          ${item.name} • ${item.size} • ₹${item.price}
+        </small>
+
+        <div class="qty">
+
+          <button onclick="changeQty(${index},-1)">
+            −
+          </button>
+
+          <strong>${item.qty}</strong>
+
+          <button onclick="changeQty(${index},1)">
+            +
+          </button>
+
+          <button
+            class="remove"
+            onclick="removeCart(${index})"
+          >
+            Remove
+          </button>
+
+        </div>
+
+      </div>
+
+      <strong>
+        ₹${item.price * item.qty}
+      </strong>
+
+    </div>
+
+  `).join("");
+
+  const total = cart.reduce(
+    (sum,item)=>sum+(item.price*item.qty),
+    0
+  );
+
+  document.getElementById("cartTotal").textContent =
+    "₹"+total;
+
+}
+
+function changeQty(index,change){
+
+  cart[index].qty += change;
+
+  if(cart[index].qty<=0){
+    cart.splice(index,1);
+  }
+
+  saveCart();
+}
+
+function removeCart(index){
+
+  cart.splice(index,1);
+
+  saveCart();
+}
+
+function checkoutWhatsApp(){
+
+  if(!cart.length){
+
+    showToast("Cart खाली है");
+
+    return;
+  }
+
+  const total = cart.reduce(
+    (sum,item)=>sum+(item.price*item.qty),
+    0
+  );
+
+  let message =
+    "Hello ARAV MASALE,%0A%0A"+
+    "I want to place an order.%0A%0A";
+
+  cart.forEach((item,i)=>{
+
+    message +=
+      `${i+1}. ${item.name} - ${item.size} x ${item.qty} = ₹${item.price*item.qty}%0A`;
+
+  });
+
+  message +=
+    `%0ATotal: ₹${total}%0A%0A`+
+    "Please confirm my order.";
+
+  window.open(
+    "https://wa.me/918795278527?text="+message,
+    "_blank"
+  );
+
+}
+
+/* ==========================================
+   PRODUCT DETAILS
+========================================== */
+
+function openDetail(id){
+
+  const p = products.find(x=>x.id===id);
+
+  if(!p) return;
+
+  document.getElementById("detailContent").innerHTML = `
+
+    <div class="detail-grid">
+
+      <div class="detail-image">
+
+        <div class="mini-pack" style="transform:rotate(0);width:145px;height:205px">
+
+          <strong>ARAV</strong>
+
+          <div style="font-size:10px">
+            MASALE
+          </div>
+
+          <div style="font-size:45px;margin:10px">
+            ${p.icon}
+          </div>
+
+          <small>
+            ${p.name.toUpperCase()}
+          </small>
+
+        </div>
+
+      </div>
+
+      <div class="detail-info">
+
+        <h2>${p.hindi}</h2>
+
+        <div style="color:#756b65">
+          ${p.name}
+        </div>
+
+        <div class="detail-price">
+          ₹${p.home[0].price}
+        </div>
+
+        <p class="detail-description">
+          ${p.description}
+        </p>
+
+        <div style="margin-bottom:15px">
+
+          <strong>Home & Kitchen</strong>
+
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+
+            <span style="padding:8px 12px;background:#fff1df;border-radius:10px">
+              500g — ₹399
+            </span>
+
+            <span style="padding:8px 12px;background:#fff1df;border-radius:10px">
+              1kg — ₹799
+            </span>
+
+          </div>
+
+        </div>
+
+        <div style="margin-bottom:20px">
+
+          <strong>Bulk / Business</strong>
+
+          <div style="margin-top:8px">
+
+            <span style="padding:8px 12px;background:#e6f0e9;border-radius:10px">
+              100g — ₹35
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="detail-actions">
+
+          <button
+            class="add"
+            onclick="quickAdd('${p.id}','500g',399)"
+          >
+            Add 500g — ₹399
+          </button>
+
+          <button
+            class="add"
+            style="background:#234d35"
+            onclick="quickAdd('${p.id}','1kg',799)"
+          >
+            Add 1kg — ₹799
+          </button>
+
+          <a
+            class="btn btn-primary"
+            target="_blank"
+            href="https://wa.me/918795278527?text=${encodeURIComponent(
+              "Hello ARAV MASALE, mujhe "+p.name+" ke baare mein jaanna hai."
+            )}"
+          >
+            💬 Ask on WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+  document
+    .getElementById("detailOverlay")
+    .classList.add("show");
+
+  document.body.classList.add("no-scroll");
+
+}
+
+function quickAdd(id,size,price){
+
+  const p = products.find(x=>x.id===id);
+
+  const existing = cart.find(
+    item=>item.id===id && item.size===size
+  );
+
+  if(existing){
+    existing.qty++;
+  }else{
+    cart.push({
+      id,
+      name:p.name,
+      hindi:p.hindi,
+      size,
+      price,
+      qty:1
+    });
+  }
+
+  saveCart();
+
+  closeDetail();
+
+  showToast("Product cart में add हो गया ✓");
+
+}
+
+function closeDetail(){
+
+  document
+    .getElementById("detailOverlay")
+    .classList.remove("show");
+
+  document.body.classList.remove("no-scroll");
+
+}
+
+function closeDetailOutside(e){
+
+  if(e.target.id==="detailOverlay"){
+    closeDetail();
+  }
+
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+function toggleSearch(){
+
+  const box =
+    document.getElementById("searchBox");
+
+  box.classList.toggle("show");
+
+  if(box.classList.contains("show")){
+
+    document
+      .getElementById("searchInput")
+      .focus();
+
+  }
+
+}
+
+function searchProducts(){
+
+  const q =
+    document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
+
+  if(!q){
+
+    renderProducts(products);
+
+    return;
+  }
+
+  const filtered = products.filter(p=>
+    p.name.toLowerCase().includes(q) ||
+    p.hindi.includes(q) ||
+    p.description.toLowerCase().includes(q)
+  );
+
+  renderProducts(filtered);
+}
+
+/* ==========================================
+   BULK PRODUCTS
+========================================== */
+
+function showBulkProducts(){
+
+  currentMode =
+    currentMode==="home" ? "bulk" : "home";
+
+  renderProducts();
+
+  document
+    .getElementById("products")
+    .scrollIntoView({behavior:"smooth"});
+
+  showToast(
+    currentMode==="bulk"
+      ? "Bulk / Business products selected"
+      : "Home & Kitchen products selected"
+  );
+
+}
+
+/* ==========================================
+   WISHLIST
+========================================== */
+
+function toggleWishlist(button,id){
+
+  button.classList.toggle("active");
+
+  button.textContent =
+    button.classList.contains("active")
+      ? "♥"
+      : "♡";
+
+  showToast(
+    button.classList.contains("active")
+      ? "Wishlist में add ✓"
+      : "Wishlist से remove"
+  );
+
+}
+
+/* ==========================================
+   ARAV AI DEMO
+========================================== */
+
+function addMessage(text,type){
+
+  const box =
+    document.getElementById("chatMessages");
+
+  const div =
+    document.createElement("div");
+
+  div.className =
+    "message "+type;
+
+  div.textContent = text;
+
+  box.appendChild(div);
+
+  box.scrollTop=box.scrollHeight;
+
+}
+
+function askAI(question){
+
+  document.getElementById("aiInput").value =
+    question;
+
+  sendAI(new Event("submit"));
+
+}
+
+function sendAI(e){
+
+  e.preventDefault();
+
+  const input =
+    document.getElementById("aiInput");
+
+  const question =
+    input.value.trim();
+
+  if(!question) return;
+
+  addMessage(question,"user");
+
+  input.value="";
+
+  setTimeout(()=>{
+
+    let answer =
+      "Aapke dish ke according ARAV MASALE ke available products mein se suitable masala choose kiya ja sakta hai. ";
+
+    const q = question.toLowerCase();
+
+    if(q.includes("paneer")){
+      answer =
+        "Paneer ke liye ARAV Garam Masala ya Sabzi Masala try kar sakte hain. Aap apne taste ke according quantity adjust karein.";
+    }
+    else if(q.includes("chicken") || q.includes("meat")){
+      answer =
+        "Chicken/meat dishes ke liye ARAV Meat Masala ek suitable option hai.";
+    }
+    else if(q.includes("sabzi")){
+      answer =
+        "Daily sabzi ke liye ARAV Sabzi Masala convenient option hai.";
+    }
+    else if(q.includes("dal")){
+      answer =
+        "Dal ke flavour ke liye ARAV Haldi aur Dhaniya useful choices hain.";
+    }
+    else if(q.includes("price") || q.includes("rate")){
+      answer =
+        "Home & Kitchen: 500g ₹399 aur 1kg ₹799. Bulk/Business: 100g ₹35.";
+    }
+
+    addMessage(answer,"bot");
+
+  },500);
+
+}
+
+/* ==========================================
+   CONTACT WHATSAPP
+========================================== */
+
+function sendContact(e){
+
+  e.preventDefault();
+
+  const name =
+    document.getElementById("contactName").value;
+
+  const phone =
+    document.getElementById("contactPhone").value;
+
+  const message =
+    document.getElementById("contactMessage").value;
+
+  const text =
+    `Hello ARAV MASALE,%0A%0A`+
+    `Name: ${encodeURIComponent(name)}%0A`+
+    `Phone: ${encodeURIComponent(phone)}%0A`+
+    `Message: ${encodeURIComponent(message)}`;
+
+  window.open(
+    "https://wa.me/918795278527?text="+text,
+    "_blank"
+  );
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+function toggleMobileMenu(){
+
+  const menu =
+    document.getElementById("mobileMenu");
+
+  menu.style.display =
+    menu.style.display==="none"
+      ? "block"
+      : "none";
+
+}
+
+function closeMobileMenu(){
+
+  document.getElementById("mobileMenu")
+    .style.display="none";
+
+}
+
+/* ==========================================
+   TOAST
+========================================== */
+
+function showToast(message){
+
+  const old =
+    document.querySelector(".toast");
+
+  if(old) old.remove();
+
+  const toast =
+    document.createElement("div");
+
+  toast.className="toast";
+
+  toast.textContent=message;
+
+  toast.style.cssText=`
+    position:fixed;
+    left:50%;
+    bottom:90px;
+    transform:translateX(-50%);
+    z-index:500;
+    background:#211916;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:800;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    animation:slideUp .25s ease;
+  `;
+
+  document.body.appendChild(toast);
+
+  setTimeout(()=>{
+    toast.remove();
+  },2200);
+
+}
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+let observer;
+
+function observeReveal(){
+
+  if(!observer){
+
+    observer =
+      new IntersectionObserver(
+        entries=>{
+          entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+              entry.target.classList.add("visible");
+
+            }
+
+          });
+        },
+        {threshold:.1}
+      );
+
+  }
+
+  document
+    .querySelectorAll(".reveal")
+    .forEach(el=>observer.observe(el));
+
+}
+
+/* ==========================================
+   INIT
+========================================== */
+
+renderProducts();
+
+updateCartCount();
+
+renderCart();
+
+observeReveal();
+
+</script>
+
+</body>
+</html>
